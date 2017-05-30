@@ -1,0 +1,12 @@
+/*
+	Visual Studio dark theme-like style 
+*/
+.hljs.css .hljs-selector-class {
+	color: rgb(215, 186, 125);
+}
+
+.hljs.css .hljs-attribute {
+	color: rgb(156, 220, 254);
+}
+
+/* WebGL3D */

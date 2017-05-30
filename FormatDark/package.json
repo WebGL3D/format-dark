@@ -1,9 +1,0 @@
-{
-  "name": "format-dark",
-  "version": "0.0.0",
-  "description": "FormatDark",
-  "main": "server.js",
-  "author": {
-    "name": "Bob"
-  }
-}

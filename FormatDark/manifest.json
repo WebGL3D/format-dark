@@ -1,0 +1,36 @@
+﻿{
+	"version": "1.0.00",
+	"name": "Format: Dark",
+	"short_name": "Format: Dark",
+	"description": "Save the eys, darkify",
+
+	"icons": {
+		"128": "/images/icons/icon_128x128.png",
+		"16": "/images/icons/icon_16x16.png",
+		"48": "/images/icons/icon_64x64.png"
+	},
+
+	"content_scripts": [
+		{
+			"js": [
+				"/lib/ext.js",
+				"/lib/jquery-3.2.1.min.js",
+				"/lib/highlight.pack.js",
+				"/lib/global.js",
+
+				"/content/themes.js"
+			],
+			"css": [
+				"/css/vs-dark-common.css",
+				"/css/vs-dark-json.css",
+				"/css/vs-dark-javascript.css",
+				"/css/vs-dark-css.css"
+			],
+			"matches": [ "<all_urls>" ],
+			"run_at": "document_start"
+		}
+	],
+
+	"manifest_version": 2,
+	"incognito": "split"
+}

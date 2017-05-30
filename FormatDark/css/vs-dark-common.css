@@ -1,0 +1,39 @@
+﻿/*
+	Visual Studio dark theme-like style 
+*/
+.hljs.json,
+.hljs.css,
+.hljs.javascript {
+	display: block;
+	overflow-x: auto;
+	padding: 0.5em;
+	background: rgb(30, 30, 30);
+	color: rgb(220, 220, 220);
+	tab-size: 4;
+}
+
+.hljs.json .hljs-comment,
+.hljs.javascript .hljs-comment,
+.hljs.css .hljs-comment {
+	color: rgb(87, 166, 74);
+}
+
+.hljs.json .hljs-number,
+.hljs.javascript .hljs-number,
+.hljs.css .hljs-number {
+	color: rgb(181, 206, 186);
+}
+
+.hljs.json .hljs-emphasis,
+.hljs.javascript .hljs-emphasis,
+.hljs.css .hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs.json .hljs-strong,
+.hljs.javascript .hljs-strong,
+.hljs.css .hljs-strong {
+	font-weight: bold;
+}
+
+/* WebGL3D */
