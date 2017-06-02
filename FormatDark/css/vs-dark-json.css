@@ -1,16 +1,16 @@
 /*
 	Visual Studio dark theme-like style 
 */
-.hljs.json .hljs-regexp,
-.hljs.json .hljs-string {
+html.hljs.json .hljs-regexp,
+html.hljs.json .hljs-string {
 	color: rgb(214, 157, 133);
 }
 
-.hljs.json .hljs-attr {
+html.hljs.json .hljs-attr {
 	color: rgb(215, 186, 125);
 }
 
-.hljs.json .hljs-literal {
+html.hljs.json .hljs-literal {
 	color: rgb(86, 156, 214);
 }
 

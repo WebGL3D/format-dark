@@ -1,13 +1,13 @@
 /*
 	Visual Studio dark theme-like style 
 */
-.hljs.javascript .hljs-regexp,
-.hljs.javascript .hljs-string {
+html.hljs.javascript .hljs-regexp,
+html.hljs.javascript .hljs-string {
 	color: rgb(214, 157, 133);
 }
 
-.hljs.javascript .hljs-literal,
-.hljs.javascript .hljs-keyword {
+html.hljs.javascript .hljs-literal,
+html.hljs.javascript .hljs-keyword {
 	color: rgb(86, 156, 214);
 }
 
