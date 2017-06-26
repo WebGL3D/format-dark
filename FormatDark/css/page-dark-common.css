@@ -2,8 +2,11 @@
 	Common dark colors
 */
 html.format-dark, body.format-dark {
-	background: rgb(30, 30, 30);
 	color: rgb(220, 220, 220);
+}
+
+html.format-dark-loading, html.format-dark, body.format-dark {
+	background: rgb(30, 30, 30);
 }
 
 

@@ -18,9 +18,11 @@
 				"/lib/highlight.pack.js",
 				"/lib/global.js",
 
-				"/content/themes.js"
+				"/content/themes.js",
+				"/content/preloadDark.js"
 			],
 			"css": [
+				"/css/page-dark-common.css",
 				"/css/code/vs-dark-common.css",
 				"/css/code/vs-dark-json.css",
 				"/css/code/vs-dark-javascript.css",
@@ -32,9 +34,6 @@
 		{
 			"js": [
 				"/content/addDarkClass.js"
-			],
-			"css": [
-				"/css/page-dark-common.css"
 			],
 			"matches": [
 				"*://gabrielecirulli.github.io/2048/"

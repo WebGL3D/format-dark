@@ -63,6 +63,9 @@
     <Compile Include="content\addDarkClass.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="content\preloadDark.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="content\themes.js">
       <SubType>Code</SubType>
     </Compile>
