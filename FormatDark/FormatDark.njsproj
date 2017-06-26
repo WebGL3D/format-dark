@@ -29,12 +29,18 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="css\vs-dark-common.css">
+    <Content Include="css\games\2048-dark.css">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="css\vs-dark-css.css" />
-    <Content Include="css\vs-dark-javascript.css" />
-    <Content Include="css\vs-dark-json.css" />
+    <Content Include="css\page-dark-common.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="css\code\vs-dark-common.css">
+      <SubType>Code</SubType>
+    </Content>
+    <Content Include="css\code\vs-dark-css.css" />
+    <Content Include="css\code\vs-dark-javascript.css" />
+    <Content Include="css\code\vs-dark-json.css" />
     <Content Include="images\icons\icon_128x128.png" />
     <Content Include="images\icons\icon_16x16.png" />
     <Content Include="images\icons\icon_256x256.png" />
@@ -47,11 +53,16 @@
   <ItemGroup>
     <Folder Include="content\" />
     <Folder Include="css\" />
+    <Folder Include="css\code\" />
+    <Folder Include="css\games\" />
     <Folder Include="images\" />
     <Folder Include="images\icons\" />
     <Folder Include="lib\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="content\addDarkClass.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="content\themes.js">
       <SubType>Code</SubType>
     </Compile>

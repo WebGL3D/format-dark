@@ -21,12 +21,31 @@
 				"/content/themes.js"
 			],
 			"css": [
-				"/css/vs-dark-common.css",
-				"/css/vs-dark-json.css",
-				"/css/vs-dark-javascript.css",
-				"/css/vs-dark-css.css"
+				"/css/code/vs-dark-common.css",
+				"/css/code/vs-dark-json.css",
+				"/css/code/vs-dark-javascript.css",
+				"/css/code/vs-dark-css.css"
 			],
 			"matches": [ "<all_urls>" ],
+			"run_at": "document_start"
+		},
+		{
+			"js": [
+				"/content/addDarkClass.js"
+			],
+			"css": [
+				"/css/page-dark-common.css"
+			],
+			"matches": [
+				"*://gabrielecirulli.github.io/2048/"
+			],
+			"run_at": "document_start"
+		},
+		{
+			"css": [
+				"/css/games/2048-dark.css"
+			],
+			"matches": [ "*://gabrielecirulli.github.io/2048/*" ],
 			"run_at": "document_start"
 		}
 	],
