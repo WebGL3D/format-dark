@@ -17,7 +17,8 @@ $(function () {
 			if (e.keyCode == 13) {
 				isPretty = !isPretty;
 				$("pre").text(isPretty ? pretty : original);
-				hljs.highlightBlock(document.querySelector("html"));
+				document.head.innerHTML = "";
+				hljs.highlightBlock(document.documentElement);
 			}
 		});
 	} else if (document.contentType.startsWith("application/javascript") || location.href.endsWith(".js")) {
@@ -31,7 +32,8 @@ $(function () {
 	}
 
 	if (highlight) {
-		hljs.highlightBlock(document.querySelector("html"));
+		document.head.innerHTML = "";
+		hljs.highlightBlock(document.documentElement);
 	}
 });
 

@@ -1,4 +1,4 @@
-﻿document.querySelector("html").classList.add("format-dark-loading");
+﻿document.documentElement.classList.add("format-dark-loading");
 $(function () {
 	$("html").removeClass("format-dark-loading");
 });
