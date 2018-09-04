@@ -4,6 +4,10 @@
 $(function () {
 	var highlight = false;
 
+	if (document.contentType.startsWith("text/html")) {
+		return;
+	}
+
 	if (document.contentType.startsWith("application/json") || location.href.endsWith(".json")) {
 		highlight = true;
 
