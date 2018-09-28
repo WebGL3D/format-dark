@@ -1,5 +1,5 @@
 ﻿{
-	"version": "1.0.13",
+	"version": "1.0.14",
 	"name": "Format: Dark",
 	"short_name": "Format: Dark",
 	"description": "Save the eys, darkify",
@@ -16,6 +16,7 @@
 				"/lib/ext.js",
 				"/lib/jquery-3.2.1.min.js",
 				"/lib/highlight.pack.js",
+				"/lib/cssbeautify.js",
 				"/lib/global.js",
 
 				"/content/themes.js",

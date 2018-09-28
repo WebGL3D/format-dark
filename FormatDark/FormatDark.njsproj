@@ -70,6 +70,7 @@
     <Compile Include="content\themes.js">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="lib\cssbeautify.js" />
     <Compile Include="lib\ext.js">
       <SubType>Code</SubType>
     </Compile>
