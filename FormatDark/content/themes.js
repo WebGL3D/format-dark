@@ -37,7 +37,8 @@ $(function () {
 
 		original = document.documentElement.innerText;
 		pretty = js_beautify(original, {
-			indent_size: 2,
+			indent_char: "\t",
+			indent_size: 1,
 			space_in_empty_paren: true
 		});
 	} else if (document.contentType.includes("css") || location.href.endsWith(".css")) {
