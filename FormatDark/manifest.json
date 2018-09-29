@@ -16,6 +16,7 @@
 				"/lib/ext.js",
 				"/lib/jquery-3.2.1.min.js",
 				"/lib/highlight.pack.js",
+				"/lib/beautify.js",
 				"/lib/cssbeautify.js",
 				"/lib/global.js",
 

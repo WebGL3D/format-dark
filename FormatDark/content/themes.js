@@ -32,7 +32,11 @@ $(function () {
 		highlight = true;
 		languageName = "javascript";
 
-		// TODO: Pretty-print?
+		original = document.documentElement.innerText;
+		pretty = js_beautify(original, {
+			indent_size: 2,
+			space_in_empty_paren: true
+		});
 	} else if (document.contentType.includes("css") || location.href.endsWith(".css")) {
 		highlight = true;
 		languageName = "css";
@@ -45,17 +49,16 @@ $(function () {
 		});
 	}
 
-	$(document).keyup(function (e) {
-		if (e.keyCode === 13 && pretty && highlight) {
-			isPretty = !isPretty;
-			var pre = $("pre");
-			pre.text(isPretty ? pretty : original);
-			doHighlight();
-		}
-	});
-
 	if (highlight) {
 		doHighlight();
+
+		$(document).keyup(function (e) {
+			if (e.keyCode === 13 && pretty) {
+				isPretty = !isPretty;
+				$("pre").text(isPretty ? pretty : original);
+				doHighlight();
+			}
+		});
 	}
 });
 
