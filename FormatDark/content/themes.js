@@ -3,17 +3,22 @@
 */
 $(function () {
 	var languageName = "";
-	var highlight = false;
-	var isPretty = false;
-	var original, pretty;
+	var original = null, pretty = null;
 
-	var doHighlight = function () {
-		if (languageName) {
-			document.documentElement.classList.add(languageName);
+	var doHighlight = function (element) {
+		element.classList.add(languageName);
+		document.head.innerHTML = "";
+		hljs.highlightBlock(element);
+	};
+
+	var getHtmlHighlight = function (source) {
+		if (!source) {
+			return "";
 		}
 
-		document.head.innerHTML = "";
-		hljs.highlightBlock(document.documentElement);
+		var pre = $("<pre>").text(source).addClass(languageName);
+		doHighlight(pre[0]);
+		return pre.html();
 	};
 
 	if (document.contentType.includes("html")) {
@@ -21,7 +26,6 @@ $(function () {
 	}
 
 	if (document.contentType.startsWith("application/json") || location.href.endsWith(".json")) {
-		highlight = true;
 		languageName = "json";
 
 		var tag = $("pre").attr("data-extension-take-over", ext.id);
@@ -29,7 +33,6 @@ $(function () {
 		original = JSON.stringify(json);
 		pretty = JSON.stringify(json, null, "\t");
 	} else if (document.contentType.includes("javascript") || location.href.endsWith(".js")) {
-		highlight = true;
 		languageName = "javascript";
 
 		original = document.documentElement.innerText;
@@ -38,7 +41,6 @@ $(function () {
 			space_in_empty_paren: true
 		});
 	} else if (document.contentType.includes("css") || location.href.endsWith(".css")) {
-		highlight = true;
 		languageName = "css";
 
 		original = document.documentElement.innerText;
@@ -49,16 +51,24 @@ $(function () {
 		});
 	}
 
-	if (highlight) {
-		doHighlight();
+	if (original) {
+		document.documentElement.classList.add("format-dark");
 
-		$(document).keyup(function (e) {
-			if (e.keyCode === 13 && pretty) {
-				isPretty = !isPretty;
-				$("pre").text(isPretty ? pretty : original);
-				doHighlight();
-			}
-		});
+		var originalHtml = getHtmlHighlight(original);
+		var prettyHtml = getHtmlHighlight(pretty);
+
+		var pre = $("pre").html(originalHtml).addClass("hljs").addClass(languageName);
+
+		if (prettyHtml) {
+			var isPretty = false;
+
+			$(document).keyup(function (e) {
+				if (e.keyCode === 13) {
+					isPretty = !isPretty;
+					pre.html(isPretty ? prettyHtml : originalHtml);
+				}
+			});
+		}
 	}
 });
 

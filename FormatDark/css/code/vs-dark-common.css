@@ -1,9 +1,9 @@
 ﻿/*
 	Visual Studio dark theme-like style 
 */
-html.hljs.json,
-html.hljs.css,
-html.hljs.javascript {
+html.format-dark pre.hljs.json,
+html.format-dark pre.hljs.css,
+html.format-dark pre.hljs.javascript {
 	display: block;
 	overflow-x: auto;
 	padding: 0.5em;
@@ -12,27 +12,27 @@ html.hljs.javascript {
 	tab-size: 4;
 }
 
-html.hljs.json .hljs-comment,
-html.hljs.javascript .hljs-comment,
-html.hljs.css .hljs-comment {
+html.format-dark pre.hljs.json .hljs-comment,
+html.format-dark pre.hljs.javascript .hljs-comment,
+html.format-dark pre.hljs.css .hljs-comment {
 	color: rgb(87, 166, 74);
 }
 
-html.hljs.json .hljs-number,
-html.hljs.javascript .hljs-number,
-html.hljs.css .hljs-number {
+html.format-dark pre.hljs.json .hljs-number,
+html.format-dark pre.hljs.javascript .hljs-number,
+html.format-dark pre.hljs.css .hljs-number {
 	color: rgb(181, 206, 186);
 }
 
-html.hljs.json .hljs-emphasis,
-html.hljs.javascript .hljs-emphasis,
-html.hljs.css .hljs-emphasis {
+html.format-dark pre.hljs.json .hljs-emphasis,
+html.format-dark pre.hljs.javascript .hljs-emphasis,
+html.format-dark pre.hljs.css .hljs-emphasis {
 	font-style: italic;
 }
 
-html.hljs.json .hljs-strong,
-html.hljs.javascript .hljs-strong,
-html.hljs.css .hljs-strong {
+html.format-dark pre.hljs.json .hljs-strong,
+html.format-dark pre.hljs.javascript .hljs-strong,
+html.format-dark pre.hljs.css .hljs-strong {
 	font-weight: bold;
 }
 

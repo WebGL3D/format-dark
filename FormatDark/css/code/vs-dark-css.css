@@ -1,11 +1,11 @@
 /*
 	Visual Studio dark theme-like style 
 */
-html.hljs.css .hljs-selector-class {
+html.format-dark pre.hljs.css .hljs-selector-class {
 	color: rgb(215, 186, 125);
 }
 
-html.hljs.css .hljs-attribute {
+html.format-dark pre.hljs.css .hljs-attribute {
 	color: rgb(156, 220, 254);
 }
 
