@@ -55,6 +55,11 @@ $(function () {
 
 		original = document.documentElement.innerText;
 		pretty = document.documentElement.innerText;
+	} else if (document.contentType.includes("text/plain") && location.href.endsWith(".html")) {
+		languageName = "html";
+
+		original = document.documentElement.innerText;
+		pretty = document.documentElement.innerText;
 	}
 
 	if (original) {
