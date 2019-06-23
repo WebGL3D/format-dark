@@ -1,0 +1,22 @@
+﻿html {
+	background: rgb(30, 30, 30);
+	color: rgb(220, 220, 220);
+}
+
+body .docinfo,
+body .top {
+	background: none; 
+ }
+
+a,
+h2 > a.selflink,
+h3 > a.selflink,
+h4 > a.selflink,
+h5 > a.selflink,
+h6 > a.selflink {
+	color: rgb(86, 156, 214);
+}
+
+.content > div:first-child {
+	display: none;
+}

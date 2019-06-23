@@ -50,6 +50,11 @@ $(function () {
 			autosemicolon: true,
 			openbrace: "end-of-line"
 		});
+	} else if (document.contentType.includes("lua") || (document.contentType.includes("text/plain") && location.href.endsWith(".lua"))) {
+		languageName = "lua";
+
+		original = document.documentElement.innerText;
+		pretty = document.documentElement.innerText;
 	}
 
 	if (original) {
