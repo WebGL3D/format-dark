@@ -25,14 +25,14 @@ $(function () {
 		return;
 	}
 
-	if (document.contentType.startsWith("application/json") || location.href.endsWith(".json")) {
+	if (document.contentType.startsWith("application/json") || location.pathname.endsWith(".json")) {
 		languageName = "json";
 
 		var tag = $("pre").attr("data-extension-take-over", ext.id);
 		var json = JSON.parse(tag.html());
 		original = JSON.stringify(json);
 		pretty = JSON.stringify(json, null, "\t");
-	} else if (document.contentType.includes("javascript") || location.href.endsWith(".js")) {
+	} else if (document.contentType.includes("javascript") || location.pathname.endsWith(".js")) {
 		languageName = "javascript";
 
 		original = document.documentElement.innerText;
@@ -41,7 +41,7 @@ $(function () {
 			indent_size: 1,
 			space_in_empty_paren: true
 		});
-	} else if (document.contentType.includes("css") || location.href.endsWith(".css")) {
+	} else if (document.contentType.includes("css") || location.pathname.endsWith(".css")) {
 		languageName = "css";
 
 		original = document.documentElement.innerText;
@@ -50,12 +50,12 @@ $(function () {
 			autosemicolon: true,
 			openbrace: "end-of-line"
 		});
-	} else if (document.contentType.includes("lua") || (document.contentType.includes("text/plain") && location.href.endsWith(".lua"))) {
+	} else if (document.contentType.includes("lua") || (document.contentType.includes("text/plain") && location.pathname.endsWith(".lua"))) {
 		languageName = "lua";
 
 		original = document.documentElement.innerText;
 		pretty = document.documentElement.innerText;
-	} else if (document.contentType.includes("text/plain") && location.href.endsWith(".html")) {
+	} else if (document.contentType.includes("text/plain") && location.pathname.endsWith(".html")) {
 		languageName = "html";
 
 		original = document.documentElement.innerText;
