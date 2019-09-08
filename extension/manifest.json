@@ -13,11 +13,11 @@
 	"content_scripts": [
 		{
 			"js": [
-				"/lib/ext.js",
-				"/lib/jquery-3.2.1.min.js",
-				"/lib/highlight.pack.js",
-				"/lib/beautify.js",
-				"/lib/cssbeautify.js",
+				"/js/lib/ext.js",
+				"/js/lib/jquery-3.2.1.min.js",
+				"/js/lib/highlight.pack.js",
+				"/js/lib/beautify.js",
+				"/js/lib/cssbeautify.js",
 
 				"/js/themes.js",
 				"/js/preloadDark.js"
