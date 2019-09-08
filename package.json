@@ -1,0 +1,6 @@
+{
+	"name": "format-dark",
+	"dependencies": {
+		"node-sass": "*"
+	}
+}

@@ -1,0 +1,57 @@
+@import "variables";
+
+/* # Insights Pulse */
+
+body.github-dark {
+    .summary-stats li .num {
+        color: $text-color !important;
+    }
+
+    .diffstat-summary strong {
+        color: $text-color !important;
+    }
+
+    /* # Insights Traffic */
+
+    .boxed-group-inner {
+        color: $text-color !important;
+    }
+
+    table.capped-list tr:nth-child(even) {
+        background-color: $bg-color !important;
+    }
+
+    /* # Insights Forks */
+
+    .network .current-repository {
+        background-color: $private-bg !important;
+    }
+
+    /* Marketplace */
+
+    .MarketplaceSideNav {
+        background-color: $bg-color !important;
+    }
+
+    /* Upgrade your plan */
+
+    .radio-label {
+        color: $text-color !important;
+    }
+
+    .bg-gray.bg-gray {
+        background-color: $dropdown-bg !important;
+    }
+
+    .bg-gray-light {
+        background-color: $tag-bg-color !important;
+    }
+
+    .token-scope {
+        color: $bright-text-color !important;
+    }
+
+    .access-token .token-description {
+        color: $link-color !important;
+    }
+}

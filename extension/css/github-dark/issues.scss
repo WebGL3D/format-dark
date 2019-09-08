@@ -1,0 +1,15 @@
+@import "variables";
+
+body.github-dark {
+	.task-progress .progress-bar .progress {
+		background-color: $faded-link-color !important;
+	}
+
+	.new-label {
+		background-color: $comment-bg !important;
+
+		.js-new-label-color {
+			color: $link-color !important;
+		}
+	}
+}

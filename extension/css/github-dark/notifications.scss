@@ -1,0 +1,7 @@
+@import "variables";
+
+body.github-dark {
+    .list-group-item[aria-selected="true"], .list-group-item.navigation-focus {
+        background-color: $tag-bg-color !important;
+    }
+}

@@ -1,5 +1,5 @@
 ﻿{
-	"version": "1.0.18",
+	"version": "1.0.19",
 	"name": "Format: Dark",
 	"short_name": "Format: Dark",
 	"description": "Save the eys, darkify",
@@ -19,8 +19,8 @@
 				"/lib/beautify.js",
 				"/lib/cssbeautify.js",
 
-				"/content/themes.js",
-				"/content/preloadDark.js"
+				"/js/themes.js",
+				"/js/preloadDark.js"
 			],
 			"css": [
 				"/css/page-dark-common.css",
@@ -38,6 +38,17 @@
 				"/css/documentation/ietf.org.css"
 			],
 			"matches": [ "*://tools.ietf.org/html/*" ],
+			"run_at": "document_start"
+		},
+		{
+			"css": [
+				"/css/output/github-dark.css"
+			],
+			"js": [
+				"/js/lib/documentReady.js",
+				"/js/github/github-dark.js"
+			],
+			"matches": ["https://github.com/*"],
 			"run_at": "document_start"
 		}
 	],
