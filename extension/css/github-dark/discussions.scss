@@ -199,7 +199,10 @@ body.github-dark {
     }
     .comment-reactions .user-has-reacted {
         background-color: $tag-bg-color !important;
-    }
+	}
+	.comment-body {
+		color: $text-color !important;
+	}
     .merge-branch-heading {
         color: $bright-text-color !important;
     }
