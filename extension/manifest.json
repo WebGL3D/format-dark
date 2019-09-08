@@ -34,22 +34,6 @@
 			"run_at": "document_start"
 		},
 		{
-			"js": [
-				"/content/addDarkClass.js"
-			],
-			"matches": [
-				"*://gabrielecirulli.github.io/2048/"
-			],
-			"run_at": "document_start"
-		},
-		{
-			"css": [
-				"/css/games/2048-dark.css"
-			],
-			"matches": [ "*://gabrielecirulli.github.io/2048/*" ],
-			"run_at": "document_start"
-		},
-		{
 			"css": [
 				"/css/documentation/ietf.org.css"
 			],
