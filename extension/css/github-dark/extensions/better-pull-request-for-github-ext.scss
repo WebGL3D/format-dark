@@ -1,0 +1,16 @@
+/* Better Pull Request for GitHub Extension */
+
+body.github-dark {
+	.enable_better_github_pr .__better_github_pr{
+		background-color: $dropdown-bg !important;
+		border: 1px solid $border-color !important;
+	}
+
+	.github-pr-file.github-pr-file-highlight {
+		background: $bg-color !important;
+	}
+
+	.tree-view_item:hover {
+		background-color: $bg-color !important;
+	}
+}

@@ -1,13 +1,11 @@
-@import "variables";
+/* # Live editor */
 
 body.github-dark {
-    /* # Live editor */
-
-    .cm-s-github {
-        .cm-string {
-            color: #98c379
-        }
-    }
+	.cm-s-github {
+		.cm-string {
+			color: #98c379;
+		}
+	}
 
     .CodeMirror {
         background: $code-bg !important;

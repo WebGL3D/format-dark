@@ -1,0 +1,28 @@
+/* GitHub Hovercard Extension */
+
+body.github-dark {
+	.tooltipster-box {
+		.tooltipster-content {
+			background-color: $dropdown-bg !important;
+			border-color: $border-color !important;
+			color: $text-color !important;
+
+			.ghh {
+				.ghh-more {
+					.ghh-stats {
+						span {
+							color: $text-color !important;
+						}
+					}
+				}
+				.ghh-pull-meta {
+					.ghh-branch {
+						.commit-ref {
+							background-color: $block-bg !important;
+						}
+					}
+				}
+			}
+		}
+	}
+}

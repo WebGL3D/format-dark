@@ -1,5 +1,3 @@
-@import "variables";
-
 /* # Repo page */
 
 body.github-dark {
@@ -49,8 +47,8 @@ body.github-dark {
                 span.percent {
                     font-size: 11px !important;
                 }
-                &>a,
-                &>span {
+                & > a,
+                & > span {
                     color: $link-color !important;
                 }
             }
@@ -80,4 +78,21 @@ body.github-dark {
     .text-blue {
         color: $text-color !important;
     }
+    .Box-body {
+        border-color: $border-color !important;
+    }
+
+    auto-complete {
+        .autocomplete-item {
+            color: $text-color !important;
+        }
+    }
+
+    .Progress{
+        background-color: $bg-color;
+	}
+	
+	.text-mono {
+		background: $dropdown-bg !important;
+	}
 }

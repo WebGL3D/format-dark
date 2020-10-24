@@ -1,5 +1,3 @@
-@import "variables";
-
 /* # Misc */
 
 body.github-dark {
@@ -9,9 +7,13 @@ body.github-dark {
     .border-gray-dark {
         border-color: $border-color !important;
     }
+    .border-top,
     .border-right,
     .border-bottom,
-    .border-left {
+    .border-left,
+    .border-lg-left,
+    .BorderGrid-cell,
+    .Subhead {
         border-color: $border-color !important;
     }
     .bg-white {
@@ -67,16 +69,33 @@ body.github-dark {
     .btn:disabled {
         background-color: $dropdown-bg !important;
         color: $link-color !important;
+        opacity: 0.5 !important;
+        cursor: not-allowed !important;
     }
     .btn-outline.disabled,
     .btn-outline:disabled {
         background-color: $dropdown-bg !important;
+        cursor: not-allowed !important;
+    }
+    .btn-primary {
+        color: $bright-text-color !important;
+        background-image: $button-primary-bg-image !important;
+    }
+    .btn-primary:hover {
+        background-image: $button-primary-bg-image-hover !important;
+    }
+    .btn-danger {
+        background-image: $button-danger-bg-image !important;
+    }
+    .btn-danger:hover {
+        background-image: $button-danger-bg-image-hover !important;
     }
     .gh-header {
         background-color: transparent !important;
     }
     .gh-header-meta {
         color: $text-color !important;
+        border-color: $border-color !important;
     }
     .gh-header-meta .author {
         color: $text-color !important;
@@ -96,82 +115,18 @@ body.github-dark {
     .underline-nav-item:hover {
         color: $link-color-selected !important;
     }
-    .select-menu-modal {
-        color: $text-color !important;
-    }
-    .select-menu-divider,
-    .select-menu-header .select-menu-title {
-        color: $text-color !important;
-    }
-    .select-menu-text-filter:first-child:last-child {
-        background-color: $dropdown-bg !important;
-        border-color: $border-color !important;
-    }
-    .select-menu-divider,
-    .select-menu-header {
-        background-color: $dropdown-bg !important;
-        border-color: $border-color !important;
-    }
-    .select-menu-filters {
-        background-color: $dropdown-bg !important;
-        border-color: $border-color !important;
-    }
-    .select-menu-item.selected {
-        color: $link-color-selected !important;
-    }
-    .select-menu-item {
-        border-color: $border-color !important;
-        background-color: $dropdown-bg !important;
-        &:hover, &:focus {
-            background-color: $file-row-active-bg !important;
-        }
-        &.navigation-focus {
-            background-color: $border-color !important;
-            .description-inline,
-            &.select-menu-action,
-            &.selected {
-                background-color: $border-color !important;
-            }
-        }
-
-        .select-menu-item-text pre {
-            color: $text-color !important;
-        }
-    }
-    .label-select-menu .select-menu-item.js-navigation-item.selected {
-        background: $tag-bg-color !important;
-    }
-    .select-menu-modal {
-        background: $dropdown-bg !important;
-    }
-    .select-menu-tabs {
-        border-color: $border-color !important;
-    }
-    .select-menu-text-filter input {
-        border-color: $border-color !important;
-    }
-    .select-menu-tabs .select-menu-tab-nav.selected,
-    .select-menu-tabs .select-menu-tab-nav[aria-selected="true"],
-    .select-menu-tabs a.selected {
-        background-color: $dropdown-bg !important;
-        color: $link-color-selected !important;
-        border-color: $border-color !important;
-    }
-    .select-menu-tabs .select-menu-tab-nav:hover,
-    .select-menu-tabs a:hover {
-        color: $link-color-selected !important;
-    }
-    .select-menu-tabs .select-menu-tab-nav[aria-selected="true"] {
-        border-bottom-color: $dropdown-bg !important;
-    }
     .dropdown-menu {
         background-color: $dropdown-bg !important;
+        border-color: $border-color;
         &:after {
             border-bottom-color: $dropdown-bg !important;
         }
-        .user-status-emoji-only-header {
-            background-color: $dropdown-bg !important;
+        &:before {
+            border-bottom-color: $border-color;
         }
+    }
+    .dropdown-divider {
+        border-color: $border-color;
     }
     .muted-link {
         color: $link-color !important;
@@ -201,21 +156,42 @@ body.github-dark {
     .dropdown-header {
         color: $faded-link-color !important;
     }
-    .user-status-message-wrapper {
-        color: $link-color !important;
-    }
-    .user-status-emoji-only-header {
-        background-color: $bg-color !important;
-    }
-    .user-status-container {
-        border: none !important;
-    }
-}
 
-.cc-ext .pagehead-actions .cc-classic-cta a {
-    border-color: $border-color !important;
-}
+    .Popover-message--bottom-left:before,
+    .Popover-message--bottom-right:before,
+    .Popover-message--bottom:before {
+        border-top-color: $border-color !important;
+    }
 
-.pagehead-actions > li {
-    color: $bright-text-color !important;
+    .Popover-message--bottom-left:after,
+    .Popover-message--bottom-right:after,
+    .Popover-message--bottom:after {
+        border-top-color: $block-bg !important;
+    }
+
+
+    .Popover-message:before {
+        border-bottom-color: $border-color !important;
+    }
+
+    .Popover-message:after {
+        border-bottom-color: $block-bg !important;
+    }
+
+    .render-notice {
+        background-color: $dropdown-bg !important;
+        color: $text-color !important;
+    }
+
+	.cc-ext .pagehead-actions .cc-classic-cta a {
+		border-color: $border-color !important;
+	}
+
+	.pagehead-actions > li {
+		color: $bright-text-color !important;
+	}
+
+	.signed-commit-header {
+		background-color: $dropdown-bg !important;
+	}
 }

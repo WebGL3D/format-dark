@@ -1,11 +1,10 @@
-@import "variables";
 
 body.github-dark {
-  .alert{
-    background-color: $alert-bg-color !important;
+	.alert {
+		background-color: $alert-bg-color !important;
 
-    &.warning{
-      background-color: $alert-warning-bg-color !important;
-    }
-  }
+		&.warning {
+			background-color: $alert-warning-bg-color !important;
+		}
+	}
 }

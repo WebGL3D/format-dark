@@ -1,10 +1,19 @@
-@import "variables";
-
 /* # Layout */
 
 body.github-dark {
     background-color: $bg-color !important;
     color: $text-color !important;
+    &.page-responsive {
+        .pagehead {
+            background-color: $bg-color !important;
+
+        }
+    }
+
+    .UnderlineNav {
+        box-shadow: inset 0 -1px 0 $bg-color !important;
+    }
+
     .reponav-item {
         color: $faded-link-color !important;
         &.selected {
@@ -20,6 +29,14 @@ body.github-dark {
     .repohead.experiment-repo-nav {
         background: $head-bg !important;
         border-color: $border-color !important;
+    }
+    /* Repo label (i.e. Private, Archived) */
+    .Label {
+        &.Label--outline,
+        &.Label--gray {
+            color: $text-color !important;
+            border-color: $light-border-color !important;
+        }
     }
     .site-header {
         background: $head-bg !important;
@@ -45,20 +62,24 @@ body.github-dark {
         border-color: $border-color !important;
         color: $link-color !important;
     }
+    .jump-to-field-active {
+        color: $link-color !important;
+    }
     .flash {
         background-color: $tag-bg-color !important;
         color: $link-color !important;
     }
     .blankslate {
-        background-color: #31363f !important;
+        background-color: $block-bg !important;
         border-color: $border-color !important;
     }
     .menu {
-        background-color: #31363f !important;
+        background-color: $block-bg !important;
         border-color: $border-color !important;
     }
     .menu-item {
         border-bottom: 1px solid $border-color !important;
+        background-color: $dropdown-bg !important;
     }
     .menu-item:hover {
         background-color: #41464f !important;
@@ -88,7 +109,7 @@ body.github-dark {
         background-color: $dropdown-bg !important;
         border-color: $border-color !important;
     }
-    a:not(.IssueLabel):not(.IssueLabel--big) {
+    :not(.commit-build-statuses) > a:not(.IssueLabel):not(.IssueLabel--big):not(.lh-condensed-ultra) {
         color: $link-color !important;
     }
     div.commit-build-statuses {
@@ -172,7 +193,7 @@ body.github-dark {
     .subnav-search-context .btn {
         color: $link-color !important;
     }
-    .btn-link {
+    .btn-link:not(.IssueLabel) {
         color: $link-color !important;
     }
     .social-count {
@@ -229,8 +250,19 @@ body.github-dark {
     .news .alert {
         border-top: 1px solid $border-color !important;
     }
+    .news .Details button {
+        border-top-color: $border-color !important;
+
+        &:hover {
+            background: transparent !important;
+            text-decoration: underline !important;
+        }
+    }
+    .news .Details-content--hidden li {
+        border-top-color: $border-color !important;
+    }
     .dashboard-notice {
-        background-color: #31363f !important;
+        background-color: $block-bg !important;
         border: solid 1px $border-color !important;
         h2 {
             color: $text-color !important;
@@ -250,13 +282,13 @@ body.github-dark {
     }
     .commit .commit-title,
     .commit .commit-title a {
-        color: #BBB2A9 !important;
+        color: #bbb2a9 !important;
     }
     .commits-list-item.navigation-focus {
         background: $comment-bg !important;
     }
     .commit-group-title {
-        color: #A79F96 !important;
+        color: #a79f96 !important;
     }
     .commit-tease-contributors {
         background-color: $comment-bg !important;
@@ -264,6 +296,9 @@ body.github-dark {
     }
     .commit-tease-sha {
         color: $link-color !important;
+    }
+    .commits blockquote {
+        color: $text-color !important;
     }
     .reponav-item {
         &:focus,
@@ -282,11 +317,11 @@ body.github-dark {
             &.selected {
                 color: $link-color !important;
                 border-color: $border-color !important;
-                background: $comment-bg !important;
+                background: $bg-color !important;
             }
             &:focus,
             &:hover {
-                color: $link-color !important;
+                color: $link-color-selected !important;
             }
             .Counter {
                 color: $link-color !important;
@@ -302,8 +337,12 @@ body.github-dark {
         background-color: $dropdown-bg !important;
         border-color: $border-color !important;
     }
-    .Box {
-        background-color: #31363f !important;
+    .Box:not(.ml-1) {
+        background-color: $block-bg !important;
+        border-color: $border-color !important;
+    }
+    .dashboard .js-all-activity-header + div {
+        background-color: $bg-color !important;
         border-color: $border-color !important;
     }
     .full-commit {
@@ -317,7 +356,7 @@ body.github-dark {
             color: $link-color !important;
         }
         .commit-meta {
-            background-color: #31363f !important;
+            background-color: $block-bg !important;
             border-color: $border-color !important;
         }
     }
@@ -342,6 +381,16 @@ body.github-dark {
         border-bottom: 1px solid $border-color !important;
     }
     /* # Search */
+    .header-search-current .jump-to-field-active {
+        color: $text-color !important;
+    }
+
+    .js-jump-to-badge-search-text-default,
+    .js-jump-to-badge-search-text-global,
+    .js-jump-to-badge-jump {
+        color: $text-color !important;
+    }
+
     .code-list .code-list-item + .code-list-item {
         border-color: $border-color !important;
     }
@@ -380,6 +429,9 @@ body.github-dark {
     .bg-gray-light {
         background-color: $tag-bg-color !important;
     }
+    .bg-yellow-light {
+        background-color: $search-bg-color !important;
+    }
     .tag-info {
         color: $link-color !important;
         .tag-name {
@@ -389,15 +441,59 @@ body.github-dark {
     .Box-header {
         background-color: $dropdown-bg !important;
         border-color: $border-color !important;
+        .text-mono{
+            background-color: $dropdown-bg !important;
+        }
     }
-    .conversation-list-heading .inner {
-        background: $dropdown-bg;
+    .conversation-list-heading {
+        border-color: $border-color !important;
+
+        .inner {
+            background: $bg-color;
+        }
     }
-    .application-main .flex-wrap {
-        background-color: $bg-color !important;
+    .simple-conversation-list>li {
+        border-color: $border-color !important;
+    }
+    .application-main {
+        .flex-wrap {
+            background-color: transparent !important;
+        }
+
+        & > main {
+            & > div.border-bottom.border-gray-light {
+                background-color: $bg-color !important;
+            }
+
+            & > .site-subnav + div {
+                background-color: $bg-color !important;
+
+                .bg-blue-light {
+                    background-color: transparent !important;
+                }
+
+                .text-gray-light {
+                    color: $text-color !important;
+                }
+            }
+        }
     }
     .note,
     .help {
         color: $faded-link-color !important;
     }
+    .file-commit-form--full {
+        background-color: $bg-color !important;
+    }
+
+	@media (min-width: 768px) {
+		body {
+			&.page-responsive {
+				.pagehead,
+				.repohead.experiment-repo-nav {
+					background-color: $head-bg !important;
+				}
+			}
+		}
+	}	
 }
