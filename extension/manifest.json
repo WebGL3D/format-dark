@@ -39,17 +39,6 @@
 			],
 			"matches": [ "*://tools.ietf.org/html/*" ],
 			"run_at": "document_start"
-		},
-		{
-			"css": [
-				"/css/output/github-dark.css"
-			],
-			"js": [
-				"/js/lib/documentReady.js",
-				"/js/github/github-dark.js"
-			],
-			"matches": ["https://github.com/*"],
-			"run_at": "document_start"
 		}
 	],
 
