@@ -17,6 +17,14 @@ h6 > a.selflink {
 	color: rgb(86, 156, 214);
 }
 
-.content > div:first-child {
-	display: none;
+.content {
+	.rfcmarkup {
+		>div.noprint:first-child {
+			display: none;
+		}
+	
+		pre.meta-info {
+			background-color: transparent;
+		}
+	}
 }
