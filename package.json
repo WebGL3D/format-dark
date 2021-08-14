@@ -1,6 +1,6 @@
 {
 	"name": "format-dark",
-	"dependencies": {
-		"node-sass": "*"
+	"devDependencies": {
+		"node-sass": "^6.0.1"
 	}
 }
