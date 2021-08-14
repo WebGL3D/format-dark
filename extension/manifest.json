@@ -37,7 +37,7 @@
 			"css": [
 				"/css/documentation/ietf.org.css"
 			],
-			"matches": [ "*://tools.ietf.org/html/*" ],
+			"matches": [ "*://tools.ietf.org/html/*", "*://datatracker.ietf.org/doc/html/*" ],
 			"run_at": "document_start"
 		}
 	],
