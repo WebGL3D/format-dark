@@ -23,19 +23,15 @@
 				"/js/preloadDark.js"
 			],
 			"css": [
-				"/css/page-dark-common.css",
-				"/css/code/vs-dark-common.css",
-				"/css/code/vs-dark-json.css",
-				"/css/code/vs-dark-javascript.css",
-				"/css/code/vs-dark-css.css",
-				"/css/code/vscode-dark_plus-lua.css"
+				"/css/output/page-dark-common.css",
+				"/css/output/code/dark-code.css"
 			],
 			"matches": [ "<all_urls>" ],
 			"run_at": "document_start"
 		},
 		{
 			"css": [
-				"/css/documentation/ietf.org.css"
+				"/css/output/documentation/ietf.org.css"
 			],
 			"matches": [ "*://tools.ietf.org/html/*", "*://datatracker.ietf.org/doc/html/*" ],
 			"run_at": "document_start"
