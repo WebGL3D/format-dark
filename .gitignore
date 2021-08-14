@@ -263,4 +263,3 @@ __pycache__/
 # EXtension Specific
 *.zip
 extension/css/output/
-package-lock.json
